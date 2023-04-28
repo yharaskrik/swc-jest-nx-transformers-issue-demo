@@ -18,13 +18,13 @@ export default {
   preset: '../../jest.preset.js',
   globalSetup: '<rootDir>/src/global-setup.ts',
   transform: {
-    // 'src/global-(setup|teardown).ts': [
-    //   'ts-jest',
-    //   {
-    //     tsconfig: '<rootDir>/tsconfig.spec.json',
-    //     isolatedModules: process.env['CI'] === 'true',
-    //   },
-    // ],
+    'src/global-(setup|teardown).ts': [
+      'ts-jest',
+      {
+        tsconfig: '<rootDir>/tsconfig.spec.json',
+        isolatedModules: process.env['CI'] === 'true',
+      },
+    ],
     '^.+\\.[tj]s$': ['@swc/jest', swcJestConfig],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],

@@ -9,7 +9,7 @@ const cleanup = registerTsProject(
 import { helper } from '@angular-storybook-nx/helper';
 
 export default function () {
-  helper();
+  return helper();
 }
 
 cleanup();
